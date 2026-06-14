@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Producto</title>
+</head>
+<body>
+    <h1>Registrar Producto</h1>
+
+    <form th:action="@{/productos/registraprod}" th:object="${producto}" method="post">
+        <label>Código del Producto:</label>
+        <input type="text" th:field="*{codigoProducto}" required />
+        <br/>
+
+        <label>Nombre:</label>
+        <input type="text" th:field="*{nombre}" required />
+        <br/>
+
+        <label>Descripción:</label>
+        <input type="text" th:field="*{descripcion}" />
+        <br/>
+
+        <label>Stock:</label>
+        <input type="number" th:field="*{stock}" required />
+        <br/>
+
+        <label>Stock mínimo:</label>
+        <input type="number" th:field="*{stockMinimo}" required />
+        <br/>
+
+        <label>Categoría:</label>
+        <select th:field="*{categoria}">
+            <option th:each="cat : ${categorias}" 
+                    th:value="${cat}" 
+                    th:text="${cat.nombre}">
+            </option>
+        </select>
+        <br/>
+
+        <button type="submit">Registrar</button>
+    </form>
+</body>
+</html>

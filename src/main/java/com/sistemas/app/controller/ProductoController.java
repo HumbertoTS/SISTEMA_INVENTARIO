@@ -21,7 +21,7 @@ public class ProductoController {
     @GetMapping("/registraprod")
     public String mostrarFormulario(Model model) {
         model.addAttribute("producto", new Producto());
-        return "productoregistro"; // tu template registro.html
+        return "productoregistro"; 
     }
 
     @PostMapping("/registraprod")
@@ -33,6 +33,6 @@ public class ProductoController {
     @GetMapping("/lista")
     public String listarProductos(Model model) {
         model.addAttribute("productos", productoService.listarProductos());
-        return "lista"; // tu template lista.html
+        return "lista"; 
     }
 }
