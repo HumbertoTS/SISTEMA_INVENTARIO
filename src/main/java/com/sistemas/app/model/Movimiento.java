@@ -36,7 +36,7 @@ public class Movimiento {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "codigo_producto")
+    @JoinColumn(name = "id_producto")
     private Producto producto;
 
     @ManyToOne(fetch = FetchType.LAZY)

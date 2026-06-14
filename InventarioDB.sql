@@ -4,13 +4,13 @@ USE inventario;
 -- Tablas
 CREATE TABLE Categoria (
     id_categoria BIGINT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(50) NOT NULL,
+    nombre VARCHAR(200) NOT NULL,
     descripcion VARCHAR(200)
 );
 
 CREATE TABLE Usuario (
     id_usuario BIGINT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(50) NOT NULL,
+    nombre VARCHAR(200) NOT NULL,
     apellido VARCHAR(50) NOT NULL,
     username VARCHAR(30) NOT NULL UNIQUE,
     password VARCHAR(50) NOT NULL,
@@ -18,11 +18,10 @@ CREATE TABLE Usuario (
 );
 
 CREATE TABLE Producto (
-    id_producto BIGINT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(50) NOT NULL,
+    id_producto VARCHAR(200) PRIMARY KEY,
+    nombre VARCHAR(200) NOT NULL,
     descripcion VARCHAR(200),
-    stock INT NOT NULL DEFAULT 0,
-    stock_minimo INT NOT NULL DEFAULT 0,
+    stock INT NOT NULL DEFAULT 0,    
     id_categoria BIGINT NOT NULL,
 
     CONSTRAINT fk_producto_categoria
@@ -34,7 +33,7 @@ CREATE TABLE Producto (
 
 CREATE TABLE Movimiento (
     id_movimiento BIGINT AUTO_INCREMENT PRIMARY KEY,
-    id_producto BIGINT NOT NULL,
+    id_producto VARCHAR(200) NOT NULL,
     id_usuario BIGINT NOT NULL,
     tipo_movimiento VARCHAR(50) NOT NULL,
     cantidad INT NOT NULL,

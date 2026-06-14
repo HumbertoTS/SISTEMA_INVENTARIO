@@ -22,16 +22,12 @@
 
         <label>Stock:</label>
         <input type="number" th:field="*{stock}" required />
-        <br/>
-
-        <label>Stock mínimo:</label>
-        <input type="number" th:field="*{stockMinimo}" required />
-        <br/>
+        <br/>        
 
         <label>Categoría:</label>
         <select th:field="*{categoria}">
             <option th:each="cat : ${categorias}" 
-                    th:value="${cat}" 
+                    th:value="${cat.id}" 
                     th:text="${cat.nombre}">
             </option>
         </select>

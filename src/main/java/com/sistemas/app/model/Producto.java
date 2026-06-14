@@ -22,7 +22,7 @@ import lombok.Setter;
 public class Producto {
 
     @Id
-    @Column(name = "codigo_producto")
+    @Column(name = "id_producto")
     private String codigoProducto;
 
     @Column(nullable = false, length = 100)

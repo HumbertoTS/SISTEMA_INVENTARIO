@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.sistemas.app.model.Producto;
+import com.sistemas.app.repository.CategoriaRepository;
 import com.sistemas.app.service.ProductoService;
 
 @Controller
@@ -17,10 +18,14 @@ public class ProductoController {
 
 	@Autowired
     private ProductoService productoService;
+	
+	@Autowired
+	private CategoriaRepository categoriaRepository;
 
     @GetMapping("/registraprod")
     public String mostrarFormulario(Model model) {
         model.addAttribute("producto", new Producto());
+        model.addAttribute("categorias", categoriaRepository.findAll());
         return "productoregistro"; 
     }
 

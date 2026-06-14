@@ -18,7 +18,7 @@ public class Mapper {
 
     public static UsuarioResponseDTO toUsuarioResponseDTO(Usuario obj) {
         return UsuarioResponseDTO.builder()
-                .id(obj.getId())
+                .id_usuario(obj.getId())
                 .nombre(obj.getNombre())
                 .username(obj.getUsername())
                 .rol(obj.getRol())
