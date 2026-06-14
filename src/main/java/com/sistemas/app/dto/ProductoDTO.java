@@ -12,11 +12,11 @@ import lombok.Setter;
 @Builder
 public class ProductoDTO {
 
-    private String id;
+    private String codigoProducto;
     private String nombre;
     private String descripcion;
+    private String unidad;
     private Integer stock;
-    private Integer stockMinimo;
     private Long categoriaId;
 
 }

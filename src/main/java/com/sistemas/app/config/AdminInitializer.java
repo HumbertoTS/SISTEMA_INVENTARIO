@@ -24,6 +24,7 @@ public class AdminInitializer implements CommandLineRunner {
             Usuario admin = Usuario.builder()
                     .nombre("Administrador")
                     .apellido("Sistema")
+                    .email("vchirinos@gmail.com")
                     .username("admin")
                     .password(passwordEncoder.encode("admin123"))
                     .rol("ADMIN")

@@ -31,11 +31,11 @@ public class Producto {
     @Column(length = 200)
     private String descripcion;
 
-    @Column(nullable = false)
-    private Integer stock;
+    @Column(length = 200)
+    private String unidad;
 
-    @Column(name = "stock_minimo", nullable = false)
-    private Integer stockMinimo;
+    @Column(nullable = true)
+    private Integer stock;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_categoria", nullable = false)
