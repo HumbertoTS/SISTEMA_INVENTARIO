@@ -29,6 +29,7 @@
 		               placeholder="Buscar por código o nombre..." 
 		               th:value="${keyword}">
 		        <button type="submit" class="btn btn-primary">Buscar</button>
+				<a th:href="@{/productos/lista}" class="btn btn-secondary ms-2">Ver todos</a>
 		    </form>
 		</div>
 		<div th:if="${keyword != null}">
@@ -141,10 +142,19 @@ $(document).ready(function() {
     $('#tablaProductos').DataTable({
         language: {
             url: '//cdn.datatables.net/plug-ins/1.13.4/i18n/es-ES.json'
-        }
+        },
+        pageLength: 5, // filas por página
+        lengthMenu: [5, 10, 25, 50]
     });
 });
 </script-->
+
+<script>
+window.addEventListener('load', function() {
+    const input = document.querySelector('input[name="keyword"]');
+    input.value = '';
+});
+</script>
 
 
 </body>
