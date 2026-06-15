@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.sistemas.app.model.Categoria;
 import com.sistemas.app.model.Producto;
@@ -43,7 +44,8 @@ public class ProductoController {
 
     @GetMapping("/lista")
     public String listarProductos(Model model) {
-        model.addAttribute("productos", productoService.listarProductos());
+        
+    	model.addAttribute("productos", productoService.listarProductos());
         model.addAttribute("categorias", categoriaRepository.findAll());
         return "productolistar";       
     }
