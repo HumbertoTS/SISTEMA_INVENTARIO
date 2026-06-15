@@ -1,0 +1,99 @@
+<!--DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Producto</title>
+</head>
+<body>
+    <h1>Registrar Producto</h1>
+
+    <form th:action="@{/productos/registraprod}" th:object="${producto}" method="post">
+        <label>Código del Producto:</label>
+        <input type="text" th:field="*{codigoProducto}" required />
+        <br/>
+
+        <label>Nombre:</label>
+        <input type="text" th:field="*{nombre}" required />
+        <br/>
+
+        <label>Descripción:</label>
+        <input type="text" th:field="*{descripcion}" />
+        <br/>
+
+        <label>Stock:</label>
+        <input type="number" th:field="*{stock}" required />
+        <br/>        
+
+        <label>Categoría:</label>
+        <select th:field="*{categoria}">
+            <option th:each="cat : ${categorias}" 
+                    th:value="${cat.id}" 
+                    th:text="${cat.nombre}">
+            </option>
+        </select>
+        <br/>
+
+        <button type="submit">Registrar</button>
+    </form>
+</body>
+</html-->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Producto</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container mt-5">
+    <div class="card shadow">
+        <div class="card-header bg-primary text-white">
+            <h3 class="mb-0">Registrar Producto</h3>
+        </div>
+        <div class="card-body">
+            <form th:action="@{/productos/registraprod}" th:object="${producto}" method="post" class="needs-validation" novalidate>
+                
+                <div class="mb-3">
+                    <label class="form-label">Código del Producto</label>
+                    <input type="text" th:field="*{codigoProducto}" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Nombre</label>
+                    <input type="text" th:field="*{nombre}" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Descripción</label>
+                    <input type="text" th:field="*{descripcion}" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Stock</label>
+                    <input type="number" th:field="*{stock}" class="form-control" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Categoría</label>
+                    <select th:field="*{categoria}" class="form-select">
+                        <option th:each="cat : ${categorias}" 
+                                th:value="${cat.idCategoria}" 
+                                th:text="${cat.nombre}">
+                        </option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-success w-100">Registrar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS (opcional, para validaciones y componentes dinámicos) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

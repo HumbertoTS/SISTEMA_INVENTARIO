@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Inicio</title>
+</head>
+<body>
+
+    <h1>Bienvenido al Sistema de Inventario</h1>
+
+    <p>Login exitoso.</p>
+
+    <form th:action="@{/logout}" method="post">
+        <button type="submit">
+            Cerrar sesión
+        </button>
+    </form>
+
+</body>
+</html>
