@@ -3,7 +3,6 @@ package com.sistemas.app.mapper;
 import com.sistemas.app.dto.ProductoDTO;
 import com.sistemas.app.dto.UsuarioRequestDTO;
 import com.sistemas.app.dto.UsuarioResponseDTO;
-import com.sistemas.app.model.Categoria;
 import com.sistemas.app.model.Producto;
 import com.sistemas.app.model.Usuario;
 

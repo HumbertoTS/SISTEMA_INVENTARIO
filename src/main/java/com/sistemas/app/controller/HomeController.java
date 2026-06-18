@@ -14,15 +14,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 @RequiredArgsConstructor
 public class HomeController {
 
-    private final CategoriaService categoriaService;
-    private final ProductoService productoService;
-
     @GetMapping("/inicio")
     public String inicio(Authentication authentication, Model model) {
 
         model.addAttribute("usuario",authentication.getName());
-        model.addAttribute("productos",productoService.getAllProductos());
-        model.addAttribute("categorias", categoriaService.getAllCategorias());
 
         return "inicio";
     }
