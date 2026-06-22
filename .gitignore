@@ -38,3 +38,10 @@ build/
 
 ### Claude ###
 .claude/
+
+### Aider ###
+.aider/
+.aider*
+
+### Opencode ###
+.opencode/
