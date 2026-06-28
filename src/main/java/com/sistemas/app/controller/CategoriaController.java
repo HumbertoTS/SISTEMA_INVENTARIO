@@ -32,15 +32,7 @@ public class CategoriaController {
 
         categoriaService.createCategoria(categoria);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-        return "redirect:/inicio?success";
-=======
         return "redirect:/producto/listar?success";
->>>>>>> f369ea648191a54e26d230dc64584fc589671334
-=======
-        return "redirect:/producto/listar?success";
->>>>>>> f369ea648191a54e26d230dc64584fc589671334
     }
 }
 

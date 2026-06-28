@@ -1,45 +1,5 @@
 package com.sistemas.app.service;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-import java.util.List;
-import java.util.Optional;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import com.sistemas.app.model.Producto;
-import com.sistemas.app.repository.ProductoRepository;
-
-
-
-
-@Service
-public class ProductoService {
-
-	@Autowired
-    private ProductoRepository productoRepository;
-
-    public Producto registrarProducto(Producto producto) {
-        return productoRepository.save(producto);
-    }
-
-    public List<Producto> listarProductos() {
-        return productoRepository.findAll();
-    }
-
-    public Optional<Producto> buscarPorCodigo(String codigoProducto) {
-        return productoRepository.findByCodigoProducto(codigoProducto);
-    }
-
-    public void eliminarProducto(String codigoProducto) {
-        productoRepository.deleteById(codigoProducto);
-    }
-=======
-=======
->>>>>>> f369ea648191a54e26d230dc64584fc589671334
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -112,7 +72,7 @@ public class ProductoService implements IProductoService {
                 producto.setNombre(productoDTO.getNombre());
                 producto.setDescripcion(productoDTO.getDescripcion());
                 producto.setUnidad(productoDTO.getUnidad());
-                producto.setStock(0);
+                //producto.setStock(0);
                 producto.setCategoria(categoria);
 
                 productoRepo.save(producto);
@@ -133,8 +93,4 @@ public class ProductoService implements IProductoService {
                 return productoRepo.findByCodigoProductoContainingIgnoreCaseOrNombreContainingIgnoreCase(texto, texto).stream().map(Mapper::toProductoDTO).toList();
         }
 
-<<<<<<< HEAD
->>>>>>> f369ea648191a54e26d230dc64584fc589671334
-=======
->>>>>>> f369ea648191a54e26d230dc64584fc589671334
 }

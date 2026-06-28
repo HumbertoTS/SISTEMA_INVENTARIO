@@ -17,20 +17,9 @@ import lombok.Setter;
 @NoArgsConstructor
 @Builder
 public class Usuario {
-<<<<<<< HEAD
-<<<<<<< HEAD
-	
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_usuario")
-=======
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
->>>>>>> f369ea648191a54e26d230dc64584fc589671334
-=======
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
->>>>>>> f369ea648191a54e26d230dc64584fc589671334
     private Long id;
 
     @Column(nullable = false, length = 100)

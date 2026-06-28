@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Inventario - Usuario</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <!-- Barra superior -->
+    <div th:replace="~{components/navbar :: navbar}"></div>
+
+    <div class="container mt-4">
+
+        <!-- Encabezado -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h2 class="mb-0" th:text="${usuario.id != null ? 'Editar Usuario' : 'Nuevo Usuario'}"></h2>
+                <p class="text-muted mb-0">
+                    Completa la información del usuario y asigna su rol.
+                </p>
+            </div>
+
+            <!-- Botón de regresar -->
+            <a th:href="@{/usuario/listar}" class="btn btn-primary">
+                ⬅ Regresar
+            </a>
+        </div>
+
+        <!-- Formulario -->
+        <form th:action="@{/usuario/guardar}" th:object="${usuario}" method="post" class="card p-4 shadow-sm">
+
+            <input type="hidden" th:field="*{id}" />
+
+            <div class="mb-3">
+                <label class="form-label">Nombre</label>
+                <input type="text" th:field="*{nombre}" class="form-control" required />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Apellido</label>
+                <input type="text" th:field="*{apellido}" class="form-control" required />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" th:field="*{email}" class="form-control" required />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Username</label>
+                <input type="text" th:field="*{username}" class="form-control" required />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" th:field="*{password}" class="form-control" 
+                       th:placeholder="${usuario.id != null ? 'Mantener contraseña actual' : 'Ingrese contraseña'}" />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Rol</label>
+                <select th:field="*{rol}" class="form-select" required>
+                    <option value="">Seleccione un rol</option>
+                    <option value="ADMIN">ADMIN</option>
+                    <option value="USER">USER</option>
+                </select>
+            </div>
+
+            <div class="d-flex justify-content-end gap-2">
+                <button type="submit" class="btn btn-success">Guardar</button>
+                <a th:href="@{/usuario/listar}" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </form>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

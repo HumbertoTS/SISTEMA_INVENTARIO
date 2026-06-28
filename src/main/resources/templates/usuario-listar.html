@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema de Inventario - Usuarios</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <!-- Barra superior -->
+    <div th:replace="~{components/navbar :: navbar}"></div>
+
+    <div class="container mt-4">
+
+        <!-- Encabezado -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h2 class="mb-0">Gestión de Usuarios</h2>
+                <p class="text-muted mb-0">
+                    Administración de cuentas y roles de acceso.
+                </p>
+            </div>
+
+            <!-- Botón de regresar -->
+            <a th:href="@{/inicio}" class="btn btn-primary">
+                ⬅ Regresar
+            </a>
+        </div>
+
+        <!-- Botones de acción -->
+        <div class="d-flex gap-2 mb-3">
+            <a th:href="@{/usuario/nuevo}" class="btn btn-success">
+                + Nuevo Usuario
+            </a>
+        </div>
+
+        <!-- Tabla -->
+        <div class="card shadow-sm">
+            <div class="card-header bg-white">
+                <h5 class="mb-0">Listado de Usuarios</h5>
+            </div>
+
+            <div class="card-body">
+                <table class="table table-hover align-middle">
+                    <thead class="table-dark text-center">
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Email</th>
+                            <th>Username</th>
+                            <th>Rol</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="u : ${usuario}">
+                            <td th:text="${u.id}" class="text-center"></td>
+                            <td th:text="${u.nombre}" class="text-center"></td>
+                            <td th:text="${u.apellido}" class="text-center"></td>
+                            <td th:text="${u.email}" class="text-center"></td>
+                            <td th:text="${u.username}" class="text-center"></td>
+                            <td th:text="${u.rol}" class="text-center"></td>
+                            <td class="text-center">
+                                <a th:href="@{/usuario/editar/{id}(id=${u.id})}" 
+                                   class="btn btn-warning btn-sm">Editar</a>
+                                <a th:href="@{/usuario/eliminar/{id}(id=${u.id})}" 
+                                   class="btn btn-danger btn-sm"
+                                   onclick="return confirm('¿Seguro que deseas eliminar este usuario?');">
+                                   Eliminar
+                                </a>
+                            </td>
+                        </tr>                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

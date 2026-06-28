@@ -1,46 +1,5 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<head>
-    <title>Login</title>
-</head>
-<body>
-
-<h2>Login</h2>
-
-<div th:if="${param.error}">
-    Usuario o contraseña incorrectos
-</div>
-
-<div th:if="${param.logout}">
-    Sesión cerrada correctamente
-</div>
-
-<form th:action="@{/login}" method="post">
-
-    <div>
-        <label>Usuario</label>
-        <input type="text" name="username">
-    </div>
-
-    <div>
-        <label>Contraseña</label>
-        <input type="password" name="password">
-    </div>
-
-    <button type="submit">
-        Ingresar
-    </button>
-
-</form>
-
-<a th:href="@{/registro}">
-    Registrarse
-</a>
-=======
-=======
->>>>>>> f369ea648191a54e26d230dc64584fc589671334
 
 <head>
     <title>Login</title>
@@ -192,10 +151,6 @@
         toast.show();
     });
 </script>
-<<<<<<< HEAD
->>>>>>> f369ea648191a54e26d230dc64584fc589671334
-=======
->>>>>>> f369ea648191a54e26d230dc64584fc589671334
 
 </body>
 </html>
