@@ -9,5 +9,9 @@ import com.sistemas.app.model.Producto;
 
 public interface ProductoRepository extends JpaRepository<Producto, String> {
     Optional<Producto> findByCodigoProducto(String codigoProducto);
+<<<<<<< HEAD
     List<Producto> findByCodigoProductoContainingIgnoreCaseOrNombreContainingIgnoreCase(String codigoProducto, String nombre);
+=======
+    List<Producto> findByCodigoProductoContainingIgnoreCaseOrNombreContainingIgnoreCase(String codigo, String nombre);
+>>>>>>> f369ea648191a54e26d230dc64584fc589671334
 }

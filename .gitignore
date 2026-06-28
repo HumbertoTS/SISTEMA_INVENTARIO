@@ -31,3 +31,17 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### PlayWright ###
+.playwright/
+.playwright-cli/
+
+### Claude ###
+.claude/
+
+### Aider ###
+.aider/
+.aider*
+
+### Opencode ###
+.opencode/

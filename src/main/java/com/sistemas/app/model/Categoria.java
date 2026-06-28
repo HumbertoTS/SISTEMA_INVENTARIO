@@ -24,7 +24,11 @@ public class Categoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_categoria")
+<<<<<<< HEAD
     private Long idCategoria;
+=======
+    private Long id;
+>>>>>>> f369ea648191a54e26d230dc64584fc589671334
 
     @Column(nullable = false, length = 50)
     private String nombre;

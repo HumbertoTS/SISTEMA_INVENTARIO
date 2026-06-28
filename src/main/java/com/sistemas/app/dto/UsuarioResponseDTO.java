@@ -11,7 +11,11 @@ import lombok.Setter;
 @NoArgsConstructor
 @Builder
 public class UsuarioResponseDTO {
+<<<<<<< HEAD
     private Long id_usuario;
+=======
+    private Long id;
+>>>>>>> f369ea648191a54e26d230dc64584fc589671334
     private String nombre;
     private String username;
     private String rol;
