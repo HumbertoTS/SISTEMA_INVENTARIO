@@ -1,9 +1,13 @@
 package com.sistemas.app.controller;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+=======
+import org.springframework.security.core.Authentication;
+>>>>>>> f369ea648191a54e26d230dc64584fc589671334
 =======
 import org.springframework.security.core.Authentication;
 >>>>>>> f369ea648191a54e26d230dc64584fc589671334
@@ -15,6 +19,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 import com.sistemas.app.model.Categoria;
@@ -80,6 +85,8 @@ public class ProductoController {
         return "redirect:/productos/lista";
     }
 =======
+=======
+>>>>>>> f369ea648191a54e26d230dc64584fc589671334
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.sistemas.app.dto.ProductoDTO;
@@ -168,5 +175,8 @@ public class ProductoController {
         return "producto-listar :: tabla-productos";
     }
 
+<<<<<<< HEAD
+>>>>>>> f369ea648191a54e26d230dc64584fc589671334
+=======
 >>>>>>> f369ea648191a54e26d230dc64584fc589671334
 }

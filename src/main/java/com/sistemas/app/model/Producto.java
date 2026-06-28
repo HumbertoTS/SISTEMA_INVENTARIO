@@ -23,7 +23,11 @@ public class Producto {
 
     @Id
 <<<<<<< HEAD
+<<<<<<< HEAD
     @Column(name = "id_producto")
+=======
+    @Column(name = "codigo_producto")
+>>>>>>> f369ea648191a54e26d230dc64584fc589671334
 =======
     @Column(name = "codigo_producto")
 >>>>>>> f369ea648191a54e26d230dc64584fc589671334

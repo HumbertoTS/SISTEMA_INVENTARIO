@@ -19,6 +19,10 @@ public class ProductoDTO {
     private Integer stock;
     private Long categoriaId;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    private String categoriaNombre;
+>>>>>>> f369ea648191a54e26d230dc64584fc589671334
 =======
     private String categoriaNombre;
 >>>>>>> f369ea648191a54e26d230dc64584fc589671334

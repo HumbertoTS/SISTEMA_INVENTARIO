@@ -37,7 +37,11 @@ public class Movimiento {
 
     @ManyToOne(fetch = FetchType.LAZY)
 <<<<<<< HEAD
+<<<<<<< HEAD
     @JoinColumn(name = "id_producto")
+=======
+    @JoinColumn(name = "codigo_producto")
+>>>>>>> f369ea648191a54e26d230dc64584fc589671334
 =======
     @JoinColumn(name = "codigo_producto")
 >>>>>>> f369ea648191a54e26d230dc64584fc589671334

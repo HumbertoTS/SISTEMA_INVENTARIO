@@ -1,6 +1,7 @@
 package com.sistemas.app.service;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import java.util.List;
@@ -37,6 +38,8 @@ public class ProductoService {
         productoRepository.deleteById(codigoProducto);
     }
 =======
+=======
+>>>>>>> f369ea648191a54e26d230dc64584fc589671334
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -130,5 +133,8 @@ public class ProductoService implements IProductoService {
                 return productoRepo.findByCodigoProductoContainingIgnoreCaseOrNombreContainingIgnoreCase(texto, texto).stream().map(Mapper::toProductoDTO).toList();
         }
 
+<<<<<<< HEAD
+>>>>>>> f369ea648191a54e26d230dc64584fc589671334
+=======
 >>>>>>> f369ea648191a54e26d230dc64584fc589671334
 }

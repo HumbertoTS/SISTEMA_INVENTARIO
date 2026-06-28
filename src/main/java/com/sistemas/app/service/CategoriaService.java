@@ -1,6 +1,10 @@
 package com.sistemas.app.service;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import org.jspecify.annotations.Nullable;
+>>>>>>> f369ea648191a54e26d230dc64584fc589671334
 =======
 import org.jspecify.annotations.Nullable;
 >>>>>>> f369ea648191a54e26d230dc64584fc589671334
@@ -24,10 +28,16 @@ public class CategoriaService implements ICategoriaService {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> f369ea648191a54e26d230dc64584fc589671334
     public @Nullable Object getAllCategorias() {
         return categoriaRepo.findAll();
     }
 
+<<<<<<< HEAD
+>>>>>>> f369ea648191a54e26d230dc64584fc589671334
+=======
 >>>>>>> f369ea648191a54e26d230dc64584fc589671334
 }
